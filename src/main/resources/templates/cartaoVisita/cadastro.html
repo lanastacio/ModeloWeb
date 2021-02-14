@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+
+	<title>Cartões de Visita</title>
+
+</head>
+<body>
+	Vamos cadastra os cartões de visita.
+	
+	</br>
+	</br>
+	
+	<form th:action="@{/cartaoVisita/salvarCartao}" method="POST" th:object="${cartaoVisita}" >
+	
+	<label>Nome da Empresa</label>
+	<input type="text" th:field="*{empresa}"/>	
+	
+	</br>
+	</br>
+	
+	<label>Nome do Representante</label>
+	<input type="text" th:field="*{representante}"/>	
+	
+	</br>
+	</br>
+	
+	<label>Telefone Comercial</label>
+	<input type="text" th:field="*{telefoneComercial}"/>	
+	
+	</br>
+	</br>
+	
+	<label>Telefone Celular</label>
+	<input type="text" th:field="*{telefoneCelular}"/>	
+	
+	</br>
+	</br>
+	
+	<label>Endereco da Empresa</label>
+	<input type="text" th:field="*{enderecoEmpresa}"/>	
+	
+	</br>
+	</br>
+	
+	<button type="submit">Salvar</button>	
+	
+	</form>
+	
+	
+	
+</body>
+</html>
